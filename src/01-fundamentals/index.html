@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      // a componet is a Camel only case function that return html
+      function App() {
+        // initial value
+        // Each JSX element is converted into a JS expression that includeshtml and vanilla js using a React.createElement function call. React can therefore be written using vanilla JS without JSX but its much harder way of doing things, instead we write JSX and any JS we need inside the HTML in a declarative manner using props.
+        const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+
+        React.useEffect(function () {
+          setInterval(function () {
+            setTime(new Date().toLocaleTimeString());
+          }, 1000);
+        });
+        return React.createElement("header", null, `Hello React Its${time}`);
+      }
+      // root is where the react app has been created
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(React.createElement(App));
+    </script>
+  </body>
+</html>

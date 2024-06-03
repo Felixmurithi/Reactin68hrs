@@ -1,0 +1,28 @@
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+    @apply font-extrabold;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+
+  a:hover {
+    @apply text-emerald-600 underline;
+  }
+  a:active {
+    @apply text-emerald-600 underline;
+  }
+  a:active,
+  a.active {
+    @apply text-emerald-600 underline;
+  }
+  a:visited {
+    @apply text-emerald-600;
+  }
+}
+@tailwind components;
+@tailwind utilities;
