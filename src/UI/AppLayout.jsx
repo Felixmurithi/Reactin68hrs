@@ -3,9 +3,9 @@ import Header from "./Header";
 
 function AppLayout() {
   return (
-    <page className="grid h-screen min-w-full grid-rows-[auto_1fr]">
+    <page className="grid h-screen grid-rows-[auto_1fr]  ">
       <Header />
-      <main className="align-center overflow-y min-w-full overflow-x-clip pb-8 pt-8  sm:px-16 md:px-[80px] lg:px-[300px] ">
+      <main className="align-center min-w-full overflow-y-auto overflow-x-clip px-[20px] pb-8 pt-8  md:px-[80px] lg:px-[300px] ">
         <Outlet />
       </main>
     </page>

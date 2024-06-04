@@ -78,23 +78,30 @@ function BankContext() {
       )}
 
       {account.status === "closed" && (
-        <form className="flex justify-around" onSubmit={handleAccountOpen}>
-          <Label id="name" text="name" />
-          <Input
-            id="name"
-            onChange={(e) =>
-              dispatch({ type: "name", payload: e.target.value })
-            }
-          />
-          <Label id="currency" text="currency" />
-          <Select
-            id="currency"
-            onChange={(e) =>
-              dispatch({ type: "currency", payload: e.target.value })
-            }
-          >
-            <CurrencyOptions currencies={currencies} />
-          </Select>
+        <form
+          className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 "
+          onSubmit={handleAccountOpen}
+        >
+          <div className="flex gap-4 ">
+            <Label id="name" text="name" />
+            <Input
+              id="name"
+              onChange={(e) =>
+                dispatch({ type: "name", payload: e.target.value })
+              }
+            />
+          </div>
+          <div className="flex gap-4 ">
+            <Label id="currency" text="currency" />
+            <Select
+              id="currency"
+              onChange={(e) =>
+                dispatch({ type: "currency", payload: e.target.value })
+              }
+            >
+              <CurrencyOptions currencies={currencies} />
+            </Select>
+          </div>
           <Label id="amount" text="amount" />
           <Input
             id="amount"
@@ -177,7 +184,7 @@ function BankContext() {
               onClick={() => dispatch({ type: "withdraw" })}
             ></Button>
           </div>
-          <div className="flex justify-center gap-20">
+          <div className="flex flex-wrap justify-center  gap-4 md:flex-nowrap md:gap-20 lg:flex-nowrap lg:gap-20">
             <Select
               disabled={disabled}
               id="currencyValue"

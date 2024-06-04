@@ -15,9 +15,9 @@ function CurrencyConverter() {
   );
 
   return (
-    <div className="my-4 flex flex-col gap-6">
+    <div className="my-4 flex flex-col justify-around gap-4 border   p-2 md:border-none lg:border-none">
       <div className="flex justify-around">
-        <form className="flex gap-2">
+        <form className="flex flex-wrap justify-between gap-2 overflow-auto md:px-0 lg:px-0 ">
           <input
             type="number"
             onChange={(e) => {
@@ -25,40 +25,44 @@ function CurrencyConverter() {
             }}
             className="rounded border border-emerald-600"
           />
-          <label htmlFor="currencytosell">FROM</label>
+          <div className="flex w-full justify-between md:flex-none">
+            <label htmlFor="currencytosell">FROM</label>
 
-          <select
-            name=""
-            id="currencytosell"
-            onChange={(e) => {
-              setCurrency1(e.target.value);
-            }}
-            value={currency1}
-            disabled={loading}
-          >
-            <option value="USD">USD</option>
-            <option value="EUR">EURO</option>
-            <option value="JPY">YEN</option>
-            <option value="ZAR">RAND</option>
-          </select>
+            <select
+              name=""
+              id="currencytosell"
+              onChange={(e) => {
+                setCurrency1(e.target.value);
+              }}
+              value={currency1}
+              disabled={loading}
+            >
+              <option value="USD">USD</option>
+              <option value="EUR">EURO</option>
+              <option value="JPY">YEN</option>
+              <option value="ZAR">RAND</option>
+            </select>
+          </div>
 
-          <label htmlFor="currencytobuy"> TO</label>
-          <select
-            name=""
-            id="currencytobuy"
-            value={currency2}
-            onChange={(e) => {
-              setCurrency2(e.target.value);
-            }}
-            disabled={loading}
-          >
-            <option value="EUR">EURO</option>
-            <option value="USD">USD</option>
-            <option value="JPY">YEN</option>
-            <option value="ZAR">RAND</option>
-          </select>
+          <div className="flex w-full justify-between md:flex-none">
+            <label htmlFor="currencytobuy"> TO</label>
+            <select
+              name=""
+              id="currencytobuy"
+              value={currency2}
+              onChange={(e) => {
+                setCurrency2(e.target.value);
+              }}
+              disabled={loading}
+            >
+              <option value="EUR">EURO</option>
+              <option value="USD">USD</option>
+              <option value="JPY">YEN</option>
+              <option value="ZAR">RAND</option>
+            </select>
+          </div>
         </form>
-        <div>
+        <div className="self-center">
           <span>{conversion || error}</span>
         </div>
       </div>

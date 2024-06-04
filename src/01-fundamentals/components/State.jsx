@@ -140,7 +140,7 @@ function State() {
           A single value passed to the setter function replaces the previous
           value.
         </Paragraph>
-        <div className="flex justify-between overflow-auto">
+        <div className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 ">
           <CodeHighlight codeString={setLikesto1} />
           <ExampleDiv>
             <Add onClick={() => setSingleLike("10")} />
@@ -153,7 +153,7 @@ function State() {
           Passing values equal to the current value of state does not trigger
           rerendering.
         </Paragraph>
-        <div className="flex justify-between">
+        <div className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 ">
           <CodeHighlight codeString={setsamelike} />
           <ExampleDiv>
             <Add onClick={() => setSameLike(10)} />
@@ -193,7 +193,7 @@ function State() {
           updates are updated at the same time, they only cause one component
           rerender.
         </Paragraph>
-        <div className="flex">
+        <div className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 ">
           <CodeHighlight codeString={batchupdates} />
           <ExampleDiv>
             <Add
@@ -229,7 +229,7 @@ function State() {
           The last direct manipulation of the state value overrides the result
           of other direct manipulations of state.
         </Paragraph>
-        <div className="flex">
+        <div className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 ">
           <CodeHighlight codeString={directUpdates} />
           <ExampleDiv>
             <Add onClick={handleLikesIncrementX3III} />
@@ -243,7 +243,7 @@ function State() {
           callback functions are queued (they reference the value returned by
           other callback functions in the queue).
         </Paragraph>
-        <div className="flex">
+        <div className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 ">
           <CodeHighlight codeString={callbackQueue} />
           <ExampleDiv>
             <Add onClick={handleLikesIncrementX3I} />
@@ -258,7 +258,7 @@ function State() {
           state manipulation. Direct updates are not queued, they use the
           current value of state in the <TextBold>closure.</TextBold>
         </Paragraph>
-        <div className="flex">
+        <div className="flex flex-wrap justify-between gap-2 overflow-auto border p-2  md:border-none md:px-0 lg:border-none lg:px-0 ">
           <CodeHighlight codeString={lastUpdate} />
           <ExampleDiv>
             <Add onClick={handleLikesIncrementX3II} />

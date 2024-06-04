@@ -11,8 +11,8 @@ function Multiply({ hook }) {
   const [bg] = hook(num1, num2, allowColor, setTotal, total);
 
   return (
-    <div className=" grid grid-cols-[auto_auto] gap-2 border-2  py-2 ">
-      <div className=" flex justify-around gap-2 px-2">
+    <div className=" flex flex-wrap justify-center  gap-6  border-2 py-2 md:flex-nowrap lg:flex-nowrap">
+      <div className=" flex justify-around gap-2 px-2 sm:w-full">
         <input
           placeholder="0"
           className="h-11 w-2/6 rounded border border-emerald-800 px-2 "
@@ -30,8 +30,8 @@ function Multiply({ hook }) {
         <span className="text-4xl">=</span>
       </div>
 
-      <div className="flex flex-col  gap-10 ">
-        <div className="flex gap-4">
+      <div className="flex flex-col gap-10 ">
+        <div className="flex justify-between gap-4">
           <span className={`p-2`} style={{ backgroundColor: bg }}>
             {num1 * num2}
           </span>
@@ -54,7 +54,7 @@ function Multiply({ hook }) {
           </span>
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 self-center">
           <label htmlFor="randomcolor" className="text-sm">
             random background-color
           </label>

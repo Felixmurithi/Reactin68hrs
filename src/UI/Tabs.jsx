@@ -53,7 +53,7 @@ function TabButton({ tab, setActiveTab, activeTab, components }) {
 
 function Tab({ components, activeTab }) {
   return (
-    <div className=" rounded-sm bg-stone-100 p-3">
+    <div className=" rounded-sm bg-stone-100 md:p-3 lg:p-3">
       {components[activeTab][0]}
     </div>
   );
