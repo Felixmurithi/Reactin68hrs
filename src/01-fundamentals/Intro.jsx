@@ -66,7 +66,7 @@ function Intro() {
           </Paragraph>
           <CodeHighlight codeString={componentI} copy={true}></CodeHighlight>
           <Paragraph>
-            A root fragement does not affect the styling of elements. There are
+            A root fragment does not affect the styling of elements. There are
             two ways to declare a root fragment, an empty tag fragment and named
             Fragment.
           </Paragraph>
@@ -77,9 +77,8 @@ function Intro() {
 
           <Paragraph>
             Elements and components declared arrays must include a key
-            property/attribute which indentifies them uniquely. A named
-            Fragement is used in arrays, the empty fragment does not accept a
-            key.
+            property/attribute which indentifies them uniquely. A named Fragment
+            is used in arrays, the empty fragment does not accept a key.
           </Paragraph>
           <CodeHighlight codeString={componentIV} />
           <Note>

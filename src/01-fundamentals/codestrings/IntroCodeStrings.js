@@ -27,7 +27,7 @@ import { Fragment } from "react";
 function Component() {
   return (
     <Fragment>
-    <div>This is a Fragement</div>
+    <div>This is a Fragment</div>
     <p>Imported from react</p>,
     </Fragment>
   );
@@ -38,8 +38,8 @@ function Component() {
 
   return (
     <>
-    <div>a different Fragement</div>
-    <p>This fragement is not imported</p>,
+    <div>a different Fragment</div>
+    <p>This fragment is not imported</p>,
     </>
   );
 
@@ -53,7 +53,7 @@ return (
   [
   <p key={1}>Item 1</p>,
   <p key={2}>Item 2</p>,
-  <Fragement key={3}> </Fragement>,
+  <Fragment key={3}> </Fragment>,
   ]
 );
 }`;
