@@ -124,8 +124,8 @@ function Optimization() {
                   </TimeProviderIII>
                 </div>
                 <div className="flex gap-4">
-                  <CodeHighlight codeString={memoizedObjectValue} />
                   <CodeHighlight codeString={notMemoizedObjectValue} />
+                  <CodeHighlight codeString={memoizedObjectValue} />
                 </div>
               </div>,
               "Context change",

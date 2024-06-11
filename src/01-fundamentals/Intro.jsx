@@ -47,7 +47,7 @@ function Intro() {
             is mounted on visiting its URL, on changing page url the current
             page is unmounted and a new page mounted. The pages's child
             components are mounted in the page component. A component is mounted
-            by invoking the function is invoked, creating a
+            when the component function is invoked, creating a
             <TextBold>component instance.</TextBold>
           </Paragraph>
         </Section>
